@@ -99,13 +99,13 @@ print('Exercise 5:', sum_to(10))
 # largest(10, 4, 2) should return 10.
 #
 # Define your function and test it with different inputs.
-def largest(numA, numB, numC):
-  if numA > numB and numA > numC:
-    return numA
-  elif numB > numA and numB > numC:
-    return numB
+def largest(num_a, num_b, num_c):
+  if num_a > num_b and num_a > num_c:
+    return num_a
+  elif num_b > num_a and num_b > num_c:
+    return num_b
   else:
-    return numC
+    return num_c
   
 print('Exercise 6:', largest(2, 10, 4))
 
@@ -143,5 +143,31 @@ def product(*nums):
     num *= num
   return new_product
 
-
 print('Exercise 8:', product(-1, 4))
+
+
+# Exercise 9: Basic Calculator
+#
+# Create a function named `basicCalculator` that takes three arguments: 
+# two numbers and a string representing an operation ('add', 'subtract', 'multiply', 'divide'). 
+# Perform the provided operation on the two numbers. In operations where the order of numbers is important, 
+# treat the first parameter as the first operand and the second parameter as the second operand.
+#
+# Examples:
+# basicCalculator(10, 5, 'subtract') should return 5.
+# basicCalculator(10, 5, 'add') should return 15.
+# basicCalculator(10, 5, 'multiply') should return 50.
+# basicCalculator(10, 5, 'divide') should return 2.
+#
+# Define the function and then call it below.
+def basic_calculator(num_a, num_b, operation):
+  if operation == "subtract":
+    return num_a - num_b
+  elif operation == "add":
+    return num_a + num_b
+  elif operation == "multiply":
+    return num_a * num_b
+  elif operation == "divide":
+    return int(num_a / num_b)
+
+print('Exercise 9 Result:', basic_calculator(10, 5, "subtract"))
